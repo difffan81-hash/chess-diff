@@ -503,9 +503,9 @@
         function sqToAlg(sqv) { return String.fromCharCode(97 + (sqv & 7)) + String.fromCharCode(49 + (sqv >> 3)); }
         function moveToUciStr(mv) {
             var s = sqToAlg(mv[0]) + sqToAlg(mv[1]);
-            if (mv[3]) {
-                var t = typ(mv[3]);
-                s += (t === 5) ? 'q' : (t === 4) ? 'r' : (t === 3) ? 'b' : (t === 2) ? 'n' : '';
+            if (mv[2]) {
+                var t = typ(mv[2]);
+                s += (t === 6) ? 'q' : (t === 5) ? 'r' : (t === 3) ? 'b' : (t === 2) ? 'n' : '';
             }
             return s;
         }
